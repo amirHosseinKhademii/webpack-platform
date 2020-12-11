@@ -1,12 +1,11 @@
 import { ReactQueryCacheProvider, useQueryCache } from "react-query";
 import { ReactQueryDevtools } from "react-query-devtools";
-import { Test } from "../containers/test/Test";
+import { Root } from "./Root";
 
 const App = () => {
   return (
     <ReactQueryCacheProvider queryCache={useQueryCache()}>
-      <span className="text-red-400">test</span>
-      <Test />
+      <Root />
       <ReactQueryDevtools initialIsOpen={false} />
     </ReactQueryCacheProvider>
   );

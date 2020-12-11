@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack --config config/webpack/webpack.prod.js",
     "dev": "webpack serve --config config/webpack/webpack.dev.js ",
-    "css": "postcss src/style/main.css -o src/style/index.css --watch"
+    "css": "postcss src/style/main.css -o src/style/index.css --watch",
+    "heroku-postbuild": "npm run build"
   },
   "dependencies": {
     "autoprefixer": "^10.1.0",

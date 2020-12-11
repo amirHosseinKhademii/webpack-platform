@@ -7,6 +7,14 @@ const isDevelopment = process.env.NODE_ENV !== "production";
 
 module.exports = {
   entry: "./src/app/index.jsx",
+  optimization: {
+    runtimeChunk: {
+      name: (entrypoint) => `runtime~${entrypoint.name}`,
+    },
+    emitOnErrors: true,
+    moduleIds: "deterministic",
+    chunkIds: "named",
+  },
   module: {
     rules: [
       {
@@ -33,15 +41,6 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
-        loader: "file-loader",
-        options: {
-          outputPath: `assets`,
-          name: "[folder]/[name].[ext]",
-        },
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        exclude: /node_modules/,
         loader: "file-loader",
         options: {
           outputPath: `assets`,

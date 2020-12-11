@@ -5,7 +5,7 @@ const { merge } = require("webpack-merge");
 module.exports = merge(common, {
   output: {
     path: path.resolve(__dirname, "../../dist"),
-    filename: "main.js",
+    filename: "[name].[contenthash].js",
   },
   mode: "development",
   devtool: "inline-source-map",
@@ -19,8 +19,6 @@ module.exports = merge(common, {
     open: true,
     openPage: "",
     stats: "minimal",
-  },
-  resolve: {
-    extensions: [".js", ".jsx", ".scss"],
+    historyApiFallback: true,
   },
 });
