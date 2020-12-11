@@ -1,15 +1,27 @@
 {
-    "compilerOptions": {
-        "allowSyntheticDefaultImports": true,
-        "jsx": "react",
-        "module": "commonjs",
-        "noImplicitAny": true,
-        "outDir": "./build",
-        "preserveConstEnums": true,
-        "removeComments": true,
-        "sourceMap": true,
-        "target": "es5",
-        "allowJs": true
-    },
-    "include": ["./src/**/*"]
+  "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react",
+    "module": "commonjs",
+    "noImplicitAny": true,
+    "outDir": "./build",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "sourceMap": true,
+    "target": "es5",
+    "allowJs": true,
+    "baseUrl": "./src",
+    "paths": {
+      "Hooks/*": ["./hooks/*"],
+      "Components/*": ["./components/*"],
+      "Container/*": ["./containers/*"]
+    }
+  },
+  "include": ["./src/**/*"],
+  "exclude": [
+    "./node_modules",
+    "./build",
+    "src/**/*.test.ts",
+    "src/**/*.test.tsx"
+  ]
 }

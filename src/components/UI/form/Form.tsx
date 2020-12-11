@@ -1,6 +1,6 @@
 import * as React from "react";
 import { DevTool } from "@hookform/devtools";
-import { IForm } from "../inteface";
+import { IForm } from "./inteface";
 
 export const Form: React.FC<IForm> = React.memo(
   ({ children, handleSubmit, control, onSubmit }) => {

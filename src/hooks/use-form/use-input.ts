@@ -1,6 +1,6 @@
 import { useMemo } from "react";
 
-const useField = (form: any) => (props: {
+const useInput = (form: any) => (props: {
   name: string;
   type: string;
   rules?: any;
@@ -15,4 +15,4 @@ const useField = (form: any) => (props: {
   };
 };
 
-export { useField };
+export { useInput };

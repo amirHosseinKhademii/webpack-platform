@@ -1,3 +1,4 @@
+const path = require("path");
 const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -50,6 +51,11 @@ module.exports = {
   },
   resolve: {
     extensions: [".tsx", ".ts", ".js", ".jsx", ".scss"],
+    alias: {
+      Hooks: path.resolve(__dirname, "../../src/hooks"),
+      Components: path.resolve(__dirname, "../../src/components"),
+      Container: path.resolve(__dirname, "../../src/containers"),
+    },
   },
   plugins: [
     new MiniCssExtractPlugin({

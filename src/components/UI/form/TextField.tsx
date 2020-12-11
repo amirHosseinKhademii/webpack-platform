@@ -1,5 +1,5 @@
 import * as React from "react";
-import { IField } from "../inteface";
+import { IField } from "./inteface";
 
 export const TextFiled: React.FC<IField> = React.memo(
   ({ name, placeholder, form }) => {

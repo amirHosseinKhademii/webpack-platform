@@ -1,5 +1,6 @@
 import * as React from "react";
-import { useForm, Form, Filed, useField } from "../../hooks";
+import { useForm, useInput } from "Hooks";
+import { Form, Input } from "Components";
 
 const Test = () => {
   const form = useForm({
@@ -7,14 +8,14 @@ const Test = () => {
     initialState: { test: "" },
   });
 
-  const filed = useField(form);
+  const input = useInput(form);
 
-  const testField = filed({ name: "test", type: "text" });
+  const test = input({ name: "test", type: "text" });
 
   return (
     <div className="flex justify-center py-10 px-10">
       <Form {...form}>
-        <Filed {...testField} />
+        <Input {...test} />
       </Form>
     </div>
   );
