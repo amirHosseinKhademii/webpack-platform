@@ -5,15 +5,29 @@
   "license": "MIT",
   "scripts": {
     "build": "webpack --config config/webpack/webpack.prod.js",
-    "dev": "webpack serve --config config/webpack/webpack.dev.js "
+    "dev": "webpack serve --config config/webpack/webpack.dev.js ",
+    "css": "postcss src/style/main.css -o src/style/index.css --watch"
+  },
+  "dependencies": {
+    "autoprefixer": "^10.1.0",
+    "axios": "^0.21.0",
+    "postcss-cli": "^8.3.0",
+    "ramda": "^0.27.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-hook-form": "^6.12.2",
+    "react-query": "^2.26.4",
+    "react-router-dom": "^5.2.0",
+    "serve": "^11.3.2",
+    "tailwindcss": "^2.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
     "@babel/plugin-proposal-optional-chaining": "^7.12.7",
-    "@babel/plugin-transform-react-jsx": "^7.12.10",
     "@babel/preset-env": "^7.12.10",
     "@babel/preset-react": "^7.12.10",
+    "@fullhuman/postcss-purgecss": "^3.0.0",
     "@hookform/devtools": "^2.2.1",
     "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
     "babel-loader": "^8.2.2",
@@ -35,15 +49,5 @@
     "webpack-dev-server": "^3.11.0",
     "webpack-fix-style-only-entries": "^0.6.0",
     "webpack-merge": "^5.5.0"
-  },
-  "dependencies": {
-    "axios": "^0.21.0",
-    "ramda": "^0.27.1",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-hook-form": "^6.12.2",
-    "react-query": "^2.26.4",
-    "react-router-dom": "^5.2.0",
-    "tailwindcss": "^2.0.1"
   }
 }

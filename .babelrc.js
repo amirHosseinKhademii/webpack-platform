@@ -8,22 +8,15 @@ module.exports = {
         },
       },
     ],
-    "@babel/preset-react",
-  ],
-  plugins: [
-    "@babel/plugin-proposal-optional-chaining",
-    "@babel/plugin-proposal-class-properties",
     [
-      "@babel/plugin-transform-react-jsx",
+      "@babel/preset-react",
       {
         runtime: "automatic",
       },
     ],
-    [
-      "module-resolver",
-      {
-        root: ["./"],
-      },
-    ],
+  ],
+  plugins: [
+    "@babel/plugin-proposal-optional-chaining",
+    "@babel/plugin-proposal-class-properties",
   ],
 };

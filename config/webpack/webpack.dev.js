@@ -9,6 +9,7 @@ module.exports = merge(common, {
   },
   mode: "development",
   devtool: "inline-source-map",
+  stats: "minimal",
   devServer: {
     contentBase: "./dist",
     host: "localhost",
@@ -17,6 +18,7 @@ module.exports = merge(common, {
     compress: true,
     open: true,
     openPage: "",
+    stats: "minimal",
   },
   resolve: {
     extensions: [".js", ".jsx", ".scss"],
