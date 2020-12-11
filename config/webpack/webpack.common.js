@@ -54,7 +54,7 @@ module.exports = {
     alias: {
       Hooks: path.resolve(__dirname, "../../src/hooks"),
       Components: path.resolve(__dirname, "../../src/components"),
-      Container: path.resolve(__dirname, "../../src/containers"),
+      Containers: path.resolve(__dirname, "../../src/containers"),
     },
   },
   plugins: [

@@ -23,7 +23,7 @@
         "alias": {
           "Hooks": "./hooks",
           "Components": "./components",
-          "Container": "./containers"
+          "Containers": "./containers"
         }
       }
     ]
