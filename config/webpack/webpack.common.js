@@ -6,7 +6,7 @@ const ReactRefreshWebpackPlugin = require("@pmmmwh/react-refresh-webpack-plugin"
 const isDevelopment = process.env.NODE_ENV !== "production";
 
 module.exports = {
-  entry: "./src/app/index.jsx",
+  entry: "./src/app/index.tsx",
   optimization: {
     runtimeChunk: {
       name: (entrypoint) => `runtime~${entrypoint.name}`,
@@ -18,14 +18,13 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.jsx?$/,
+        test: /\.tsx?$/,
         exclude: /(node_modules|bower_components)/,
         use: {
-          loader: "babel-loader",
+          loader: "awesome-typescript-loader",
           options: {
             presets: ["@babel/preset-env"],
             plugins: [
-              // ... other plugins
               isDevelopment && require.resolve("react-refresh/babel"),
             ].filter(Boolean),
           },
@@ -50,7 +49,7 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: [".js", ".jsx", ".scss"],
+    extensions: [".tsx", ".ts", ".js", ".jsx", ".scss"],
   },
   plugins: [
     new MiniCssExtractPlugin({

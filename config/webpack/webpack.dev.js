@@ -4,14 +4,14 @@ const { merge } = require("webpack-merge");
 
 module.exports = merge(common, {
   output: {
-    path: path.resolve(__dirname, "../../dist"),
+    path: path.resolve(__dirname, "../../build"),
     filename: "[name].[contenthash].js",
   },
   mode: "development",
   devtool: "inline-source-map",
   stats: "minimal",
   devServer: {
-    contentBase: "./dist",
+    contentBase: "./build",
     host: "localhost",
     port: "4000",
     inline: true,
