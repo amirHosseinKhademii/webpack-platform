@@ -20,5 +20,6 @@ module.exports = merge(common, {
     openPage: "",
     stats: "minimal",
     historyApiFallback: true,
+    hot: true,
   },
 });
