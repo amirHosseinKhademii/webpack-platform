@@ -1,14 +1,14 @@
 import * as React from "react";
-import { ReactQueryCacheProvider, useQueryCache } from "react-query";
-import { ReactQueryDevtools } from "react-query-devtools";
+import { QueryClientProvider, QueryClient } from "react-query";
+import { ReactQueryDevtools } from "react-query/devtools";
 import { Root } from "./Root";
 
 const App = () => {
   return (
-    <ReactQueryCacheProvider queryCache={useQueryCache()}>
+    <QueryClientProvider client={new QueryClient()}>
       <Root />
       <ReactQueryDevtools initialIsOpen={false} />
-    </ReactQueryCacheProvider>
+    </QueryClientProvider>
   );
 };
 
